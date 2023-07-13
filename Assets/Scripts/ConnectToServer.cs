@@ -1,7 +1,8 @@
+using Definitions;
 using Photon.Pun;
-using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ConnectToServer : MonoBehaviour
+public class ConnectToServer : MonoBehaviourPunCallbacks
 {
     private void Start()
     {
@@ -11,5 +12,16 @@ public class ConnectToServer : MonoBehaviour
     private void Connect()
     {
         PhotonNetwork.ConnectUsingSettings();
+    }
+
+    public override void OnConnectedToMaster()
+    {
+        PhotonNetwork.JoinLobby();
+    }
+
+    public override void OnJoinedLobby()
+    {
+        base.OnJoinedLobby();
+        SceneManager.LoadScene(SceneNames.Lobby);
     }
 }

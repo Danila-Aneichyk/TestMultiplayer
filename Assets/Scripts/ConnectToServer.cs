@@ -1,3 +1,4 @@
+using Definitions;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
 
@@ -21,6 +22,6 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         base.OnJoinedLobby();
-        SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene(SceneNames.Lobby);
     }
 }

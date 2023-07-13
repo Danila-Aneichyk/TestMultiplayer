@@ -1,3 +1,4 @@
+using Definitions;
 using Photon.Pun;
 using TMPro;
 using UnityEngine;
@@ -19,6 +20,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("Game");
+        PhotonNetwork.LoadLevel(SceneNames.Game);
     }
 }

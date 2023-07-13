@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
+    [Header("Input fields for room creating")]
     [SerializeField] private TMP_InputField _createInputField;
     [SerializeField] private TMP_InputField _joinInputField;
 

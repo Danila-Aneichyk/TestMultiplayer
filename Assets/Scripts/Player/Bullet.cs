@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using Definitions;
+﻿using System;
+using System.Collections;
 using Photon.Pun;
 using UnityEngine;
 
@@ -11,6 +11,16 @@ namespace Player
         [SerializeField] private float _lifeTime = 0.3f;
         [SerializeField] private int _damage = 3;
         private bool _isShootLeft = false;
+
+        private void Start()
+        {
+            StartCoroutine("LifeTimeTimer");
+        }
+
+        private void Update()
+        {
+            Shoot();
+        }
 
         IEnumerator LifeTimeTimer()
         {

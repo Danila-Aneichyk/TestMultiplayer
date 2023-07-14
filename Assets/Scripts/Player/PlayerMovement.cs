@@ -37,23 +37,23 @@ public class PlayerMovement : MonoBehaviourPun
     {
         CheckJoystickRotation();
 
-        if (!_view.IsMine)
-            return;
-
-        _rb.velocity = new Vector2(_directionX, _directionY);
+        if (_view.IsMine)
+        {
+            _rb.velocity = new Vector2(_directionX, _directionY);
+        }
     }
 
     private void Rotate()
     {
         float horizontalInput = _joystick.Horizontal;
 
-        if (!_view.IsMine)
-            return;
-
-        if ((horizontalInput < 0 && IsFacingRight) || (horizontalInput > 0 && !IsFacingRight))
+        if (_view.IsMine)
         {
-            IsFacingRight = !IsFacingRight;
-            transform.Rotate(0f, 180f, 0f);
+            if ((horizontalInput < 0 && IsFacingRight) || (horizontalInput > 0 && !IsFacingRight))
+            {
+                IsFacingRight = !IsFacingRight;
+                _view.RPC("RotateCharacter", RpcTarget.AllBuffered, IsFacingRight);
+            }
         }
     }
 
@@ -61,5 +61,12 @@ public class PlayerMovement : MonoBehaviourPun
     {
         _directionX = _joystick.Horizontal * _speed;
         _directionY = _joystick.Vertical * _speed;
+    }
+
+    [PunRPC]
+    private void RotateCharacter(bool isFacingRight)
+    {
+        IsFacingRight = isFacingRight;
+        transform.Rotate(0, 180f, 0);
     }
 }

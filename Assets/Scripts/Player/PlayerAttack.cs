@@ -8,7 +8,6 @@ namespace Player
         [SerializeField] private GameObject _bulletPrefab;
         [SerializeField] private Transform _bulletSpawnRight;
         [SerializeField] private Transform _bulletSpawnLeft;
-        [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private PlayerMovement _playerMovement;
 
         public void Shoot()

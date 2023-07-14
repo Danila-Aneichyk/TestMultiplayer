@@ -12,7 +12,7 @@ namespace UI
         [Header("Components to implement")]
         [SerializeField] private PlayerAttack _playerAttack;
 
-        private void Awake()
+        private void Start()
         {
             _playerAttack = FindObjectOfType<PlayerAttack>();
             _shotButton.onClick.AddListener(_playerAttack.Shoot);

@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviourPun
     [Header("Components for movement")]
     private Joystick _joystick;
     private Rigidbody2D _rb;
-    private bool _isFacingRight = true;
+    [HideInInspector]
+    public bool IsFacingRight = true;
 
     [Header("Movement values")]
     [SerializeField] private float _speed;
@@ -49,9 +50,9 @@ public class PlayerMovement : MonoBehaviourPun
         if (!_view.IsMine)
             return;
 
-        if ((horizontalInput < 0 && _isFacingRight) || (horizontalInput > 0 && !_isFacingRight))
+        if ((horizontalInput < 0 && IsFacingRight) || (horizontalInput > 0 && !IsFacingRight))
         {
-            _isFacingRight = !_isFacingRight;
+            IsFacingRight = !IsFacingRight;
             transform.Rotate(0f, 180f, 0f);
         }
     }

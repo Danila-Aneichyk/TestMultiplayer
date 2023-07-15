@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 364421989203758526}
   - component: {fileID: 9042090884409837178}
   - component: {fileID: 6779771046621759147}
+  - component: {fileID: 7052143784240514751}
   m_Layer: 0
   m_Name: HpBarFillArea
   m_TagString: Untagged
@@ -256,6 +257,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fillImage: {fileID: 9042090884409837178}
+--- !u!114 &7052143784240514751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2892804918044287794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8dbd4c5c9140ceb493d3da2d0d88bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3001412777223967926
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +281,6 @@ GameObject:
   - component: {fileID: 68269844333300419}
   - component: {fileID: 176248136123857412}
   - component: {fileID: 7909161829356498478}
-  - component: {fileID: 3398797639210023899}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -359,18 +371,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &3398797639210023899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3001412777223967926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de8dbd4c5c9140ceb493d3da2d0d88bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3906729619060540423
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,6 +827,7 @@ GameObject:
   - component: {fileID: 1370830064959432859}
   - component: {fileID: 102173510246897798}
   - component: {fileID: 381000043859829831}
+  - component: {fileID: 5383655975671477419}
   m_Layer: 0
   m_Name: NamePanel
   m_TagString: Untagged
@@ -893,6 +894,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5383655975671477419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310802447423994493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8dbd4c5c9140ceb493d3da2d0d88bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9178257205712158778
 GameObject:
   m_ObjectHideFlags: 0

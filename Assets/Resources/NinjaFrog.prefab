@@ -674,7 +674,7 @@ MonoBehaviour:
   _playerHp: {fileID: 2071026266584010699}
   _playerMovement: {fileID: 6440387279295562942}
   _playerAttack: {fileID: 7794129456835102973}
-  _view: {fileID: 0}
+  _looseScreen: {fileID: 0}
 --- !u!1 &6060832279850759686
 GameObject:
   m_ObjectHideFlags: 0

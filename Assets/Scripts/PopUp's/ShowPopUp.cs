@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Player;
 using UnityEngine;
 
@@ -14,14 +13,17 @@ namespace PopUp_s
 
         private float _popUpDuration = 3f;
 
-        private void Awake()
+        private bool _isPopUpShown = false;
+
+        private void Start()
         {
+            _looseScreen.SetActive(false);
             _playerDeath = FindObjectOfType<PlayerDeath>();
         }
 
         private void Update()
         {
-            if (_playerDeath.IsDead)
+            if (_playerDeath.IsDead && _isPopUpShown != true)
             {
                 StartCoroutine(ShowPopUpScreen());
             }
@@ -34,6 +36,8 @@ namespace PopUp_s
             yield return new WaitForSeconds(_popUpDuration);
 
             _looseScreen.SetActive(false);
+
+            _isPopUpShown = true;
         }
     }
 }

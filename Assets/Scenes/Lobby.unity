@@ -802,6 +802,7 @@ GameObject:
   - component: {fileID: 718060487}
   - component: {fileID: 718060486}
   - component: {fileID: 718060485}
+  - component: {fileID: 718060488}
   m_Layer: 5
   m_Name: JoinButton
   m_TagString: Untagged
@@ -912,6 +913,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718060483}
   m_CullTransparentMesh: 1
+--- !u!114 &718060488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718060483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2c3e162d4e4c84b498f66023a426f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputField: {fileID: 791013646}
+  _maxAmountOfCharacters: 17
+  Button: {fileID: 718060485}
+  _nameField: {fileID: 1232830819}
 --- !u!1 &791013644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,7 +1120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputField: {fileID: 791013646}
   _maxAmountOfCharacters: 17
-  _button: {fileID: 718060485}
+  Button: {fileID: 718060485}
 --- !u!1 &940027761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,7 +1810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputField: {fileID: 1232830819}
   _maxAmountOfCharacters: 10
-  _button: {fileID: 1016708578}
+  Button: {fileID: 1016708578}
 --- !u!1 &1526245180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,12 +2565,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1954481901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3b058abea8c4dc2a93e7c11a081a464, type: 3}
+  m_Script: {fileID: 11500000, guid: ea2c3e162d4e4c84b498f66023a426f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _inputField: {fileID: 1954481903}
   _maxAmountOfCharacters: 17
-  _button: {fileID: 185605887}
+  Button: {fileID: 185605887}
+  _nameField: {fileID: 1232830819}
 --- !u!1 &1965444375
 GameObject:
   m_ObjectHideFlags: 0

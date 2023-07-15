@@ -14,7 +14,8 @@ namespace Shared
         [SerializeField] private int _maxAmountOfCharacters;
 
         [Header("Buttons that interacts with IF")]
-        [SerializeField] private Button _button;
+        [SerializeField]
+        public Button Button;
 
         private void Start()
         {
@@ -30,11 +31,11 @@ namespace Shared
         {
             if (_inputField.text.Length == 0)
             {
-                _button.interactable = false;
+                Button.interactable = false;
             }
             else
             {
-                _button.interactable = true;
+                Button.interactable = true;
             }
         }
     }

@@ -2507,6 +2507,7 @@ GameObject:
   - component: {fileID: 559300466}
   - component: {fileID: 559300465}
   - component: {fileID: 559300469}
+  - component: {fileID: 559300470}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2613,7 +2614,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shotButton: {fileID: 567762987}
-  _playerAttack: {fileID: 0}
+--- !u!114 &559300470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559300464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72cf599edb6546ecb71c56d1fe138573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _looseScreen: {fileID: 796213323}
 --- !u!1 &567762985
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,7 +3567,7 @@ GameObject:
   - component: {fileID: 796213325}
   - component: {fileID: 796213327}
   m_Layer: 5
-  m_Name: WinPopUp
+  m_Name: LoosePopUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

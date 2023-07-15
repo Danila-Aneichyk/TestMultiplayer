@@ -45,6 +45,8 @@ MonoBehaviour:
   - TakeDamage
   - RotateCharacter
   - CoinCollected
+  - HpChanged
+  - SetFillHpBar
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

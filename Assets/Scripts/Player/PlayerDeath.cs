@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Definitions;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Player
 {
@@ -9,7 +11,14 @@ namespace Player
         [SerializeField] private PlayerMovement _playerMovement;
         [SerializeField] private PlayerAttack _playerAttack;
 
+       // private Button _attackButton;
+
         public bool IsDead { get; private set; }
+
+        private void Awake()
+        {
+            //_attackButton = GameObject.FindWithTag(Tags.AttackButton).GetComponent<Button>();
+        }
 
         private void Start()
         {
@@ -22,9 +31,12 @@ namespace Player
                 return;
 
             IsDead = true;
+
+
             Debug.Log("Player is dead");
             _playerMovement.enabled = false;
             _playerAttack.enabled = false;
+//            _attackButton.enabled = false;
         }
     }
 }

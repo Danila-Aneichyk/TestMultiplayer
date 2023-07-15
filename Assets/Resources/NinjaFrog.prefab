@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.1
-  m_fontSizeBase: 0.1
+  m_fontSize: 0.2
+  m_fontSizeBase: 0.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 68269844333300419}
   - component: {fileID: 176248136123857412}
   - component: {fileID: 7909161829356498478}
+  - component: {fileID: 3398797639210023899}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -358,6 +359,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3398797639210023899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3001412777223967926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8dbd4c5c9140ceb493d3da2d0d88bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3906729619060540423
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,9 +467,9 @@ GameObject:
   - component: {fileID: 1294652354418145648}
   - component: {fileID: 5441309256252997576}
   - component: {fileID: 6440387279295562942}
+  - component: {fileID: 6751401072409984711}
   - component: {fileID: 5676631666513537795}
   - component: {fileID: 7794129456835102973}
-  - component: {fileID: 6751401072409984711}
   - component: {fileID: 8594550684485233130}
   - component: {fileID: 2071026266584010699}
   - component: {fileID: -7672855369040049534}
@@ -546,6 +559,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsFacingRight: 1
   _speed: 5
+--- !u!114 &6751401072409984711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5369458531091482987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!114 &5676631666513537795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,39 +631,6 @@ MonoBehaviour:
   _bulletSpawnRight: {fileID: 56870199687193824}
   _bulletSpawnLeft: {fileID: 2015958380774930124}
   _playerMovement: {fileID: 6440387279295562942}
---- !u!114 &6751401072409984711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5369458531091482987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PositionModel:
-    SynchronizeEnabled: 1
-    TeleportEnabled: 1
-    TeleportIfDistanceGreaterThan: 0
-    InterpolateOption: 0
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 1
-    ExtrapolateOption: 0
-    ExtrapolateSpeed: 1
-    ExtrapolateIncludingRoundTripTime: 1
-    ExtrapolateNumberOfStoredPositions: 1
-  m_RotationModel:
-    SynchronizeEnabled: 1
-    InterpolateOption: 1
-    InterpolateRotateTowardsSpeed: 180
-    InterpolateLerpSpeed: 5
-  m_ScaleModel:
-    SynchronizeEnabled: 1
-    InterpolateOption: 0
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 0
 --- !u!114 &8594550684485233130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,8 +643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9228acaa914675909dc7bfeffe0d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nicknameText: {fileID: 7219865467853477902}
   _hpBar: {fileID: 6779771046621759147}
-  _hpBarPhotonView: {fileID: 5676631666513537795}
 --- !u!114 &2071026266584010699
 MonoBehaviour:
   m_ObjectHideFlags: 0

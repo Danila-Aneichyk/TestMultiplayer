@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Photon.Pun;
 using UnityEngine;
 
-namespace Player
+namespace Objects
 {
     public class Bullet : MonoBehaviourPun
     {
@@ -14,7 +13,7 @@ namespace Player
 
         private void Start()
         {
-            StartCoroutine("LifeTimeTimer");
+            StartCoroutine(nameof(LifeTimeTimer));
         }
 
         private void Update()
@@ -32,9 +31,9 @@ namespace Player
         private void Shoot()
         {
             if (!_isShootLeft)
-                transform.Translate(Vector2.right * Time.deltaTime * _speed);
+                transform.Translate(Vector2.right * (Time.deltaTime * _speed));
             else
-                transform.Translate(Vector2.left * Time.deltaTime * _speed);
+                transform.Translate(Vector2.left * (Time.deltaTime * _speed));
         }
 
         [PunRPC]

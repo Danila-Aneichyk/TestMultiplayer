@@ -10,7 +10,7 @@ namespace UI
         [SerializeField] private Button _shotButton;
 
         [Header("Components to implement")]
-        [SerializeField] private PlayerAttack _playerAttack;
+        private PlayerAttack _playerAttack;
 
         private void Start()
         {

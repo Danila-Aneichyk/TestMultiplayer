@@ -1,5 +1,4 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,18 +7,17 @@ namespace Shared
     public class InputFieldBounds : MonoBehaviour
     {
         [Header("Input field to set limits")]
-        [SerializeField] private TMP_InputField _inputField;
+        public TMP_InputField InputField;
 
         [Header("Characters limit in IF")]
         [SerializeField] private int _maxAmountOfCharacters;
 
         [Header("Buttons that interacts with IF")]
-        [SerializeField]
         public Button Button;
 
         private void Start()
         {
-            _inputField.characterLimit = _maxAmountOfCharacters;
+            InputField.characterLimit = _maxAmountOfCharacters;
         }
 
         private void Update()
@@ -29,7 +27,7 @@ namespace Shared
 
         private void SetButtonInteractable()
         {
-            if (_inputField.text.Length == 0)
+            if (InputField.text.Length == 0)
             {
                 Button.interactable = false;
             }

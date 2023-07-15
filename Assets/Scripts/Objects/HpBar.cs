@@ -1,5 +1,4 @@
-﻿using Photon.Pun;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace Objects
@@ -7,13 +6,6 @@ namespace Objects
     public class HpBar : MonoBehaviour
     {
         [SerializeField] private Image _fillImage;
-
-        //public PhotonView View;
-
-        private void Awake()
-        {
-           // View.GetComponent<PhotonView>();
-        }
 
         public void SetFill(float fillAmount) =>
             _fillImage.fillAmount = fillAmount;

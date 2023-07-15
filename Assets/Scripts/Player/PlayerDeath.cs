@@ -1,4 +1,5 @@
 ﻿using Definitions;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,12 +12,14 @@ namespace Player
         [SerializeField] private PlayerMovement _playerMovement;
         [SerializeField] private PlayerAttack _playerAttack;
 
-       // private Button _attackButton;
+        [SerializeField] private PhotonView _view;
+        // private Button _attackButton;
 
         public bool IsDead { get; private set; }
 
         private void Awake()
         {
+            _view = GetComponent<PhotonView>();
             //_attackButton = GameObject.FindWithTag(Tags.AttackButton).GetComponent<Button>();
         }
 
@@ -36,7 +39,9 @@ namespace Player
             Debug.Log("Player is dead");
             _playerMovement.enabled = false;
             _playerAttack.enabled = false;
-//            _attackButton.enabled = false;
+            ExitGames.Client.Photon.Hashtable properties = new ExitGames.Client.Photon.Hashtable();
+            properties["IsAlive"] = false;
+            //            _attackButton.enabled = false;
         }
     }
 }
